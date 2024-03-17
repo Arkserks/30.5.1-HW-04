@@ -23,7 +23,7 @@ def driver():
 def test_my_pets_explicit(driver):
     ### Проверка явного ожидания ###
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, 'email')))
-    ### Ввод лоигина ###
+    ### Ввод логина ###
     driver.find_element(By.ID, 'email').send_keys('dfsfsdf@gmail.com')
     ### Ввод пароля ###
     driver.find_element(By.ID, 'pass').send_keys('qwerty1234')
@@ -34,7 +34,7 @@ def test_my_pets_explicit(driver):
 
 
 def test_my_pets_implicit(driver):
-    ### Проверка неявного ожидания###
+    ### Проверка неявного ожидания ###
     driver.find_element(By.ID, 'email').send_keys('dfsfsdf@gmail.com')
     driver.find_element(By.ID, 'pass').send_keys('qwerty1234')
     driver.implicitly_wait(10)
